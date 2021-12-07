@@ -2,9 +2,9 @@ from csv import writer
 from misc import lists
 
 # Params
-tickername = 'SPY'
-timeframe = "30/minute"
-timeinterval = '2000-01-21/2021-11-26' # max 5000 iterations
+tickername = input("Ticker i.e 'SPY': ")
+timeframe = input("Time Interval i.e '30/minute': ")
+timeinterval = input("Timeframe i.e '2000-01-21/2021-11-26': ") # max 5000 iterations
 
 #funktion from lists.py
 lists.list_stocks(tickername, timeframe, timeinterval)
@@ -39,11 +39,11 @@ lines_seen = set() # holds lines already seen
 with open('tickers\\' + csvname, "r+") as f:
     d = f.readlines()
     f.seek(0)
-    for i in d:
-        if i not in lines_seen:
-            f.write(i)
-            lines_seen.add(i)
-    f.truncate()
+    for i in d:()
+    if i not in lines_seen:
+        f.write(i)
+        lines_seen.add(i)
+        f.truncate()
 
 with open('tickers\\' + csvname, "r") as txt_file:
   new_data = list(set(txt_file))
