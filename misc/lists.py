@@ -1,6 +1,5 @@
 import requests
-# Auth key from https://financialmodellingprep.com
-authkey = 'INSERT AUTH KEY'
+authkey = 'AUTH KEY'
 date = []
 open = []
 high = []

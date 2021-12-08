@@ -39,11 +39,11 @@ lines_seen = set() # holds lines already seen
 with open('tickers\\' + csvname, "r+") as f:
     d = f.readlines()
     f.seek(0)
-    for i in d:()
-    if i not in lines_seen:
-        f.write(i)
-        lines_seen.add(i)
-        f.truncate()
+    for i in d:
+        if i not in lines_seen:
+            f.write(i)
+            lines_seen.add(i)
+    f.truncate()
 
 with open('tickers\\' + csvname, "r") as txt_file:
   new_data = list(set(txt_file))
